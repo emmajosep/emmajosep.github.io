@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pixel Art Maker!</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+     <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="jscolor.min.js"></script>
+</head>
+<body>
+<h1>Emmanuel's Pixel Art Maker</h1>
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-4">
+    <h2>Choose Grid Size</h2>
+    <form id="sizePicker">
+        Grid Height:
+        <input type="number" id="input_height" name="height" min="1" max="50" value="1">
+        Grid Width:
+        <input type="number" id="input_width" name="width" min="1" max="50" value="1">
+        <button id="submit" type="button" onclick="makeGrid()" class="btn btn-primary mt-3">Submit</button>
+        <button type="reset" onclick="backUp()" class="btn btn-primary mt-3">Reset</button>
+    </form>
+<div class="" id="error"></div>
+    <h2>Pick A Color</h2>
+<input type="color" id="colorPicker" value="#FFFFFF">
+</div>
+<div class="col-md-8">
+
+
+    <h2>Design Canvas</h2>
+    <table id="pixel_canvas"> <!--aka grid container-->
+    </table>
+</div>
+</div>
+</div>
+    <script src="designs.js"></script>
+</body>
+</html>
